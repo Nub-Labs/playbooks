@@ -1,0 +1,29 @@
+# ──────────────────────────────────────────────────────────────────────────────
+#  Nub Labs Playbooks — Local pgvector for the Ecommerce AI series
+#  Start:  docker compose up -d
+#  Stop:   docker compose down          (data persists)
+#  Reset:  docker compose down -v        (wipes the vector store)
+#  Connect: postgresql://playbooks:playbooks@localhost:5432/playbooks
+# ──────────────────────────────────────────────────────────────────────────────
+
+services:
+  pgvector:
+    image: pgvector/pgvector:pg16
+    container_name: playbooks_pgvector
+    environment:
+      POSTGRES_USER: playbooks
+      POSTGRES_PASSWORD: playbooks
+      POSTGRES_DB: playbooks
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgvector_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U playbooks -d playbooks"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgvector_data:
+    driver: local

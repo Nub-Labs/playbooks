@@ -1,0 +1,64 @@
+# ──────────────────────────────────────────────────────────────────────────────
+#  Nub Labs Playbooks — Python Requirements
+#  Setup: python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+#  Colab users: each notebook installs what it needs via !pip install cells.
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Jupyter (local development only — Colab provides this)
+jupyter>=1.0.0
+ipykernel>=6.29.0
+
+# Core data
+pandas>=2.1.0
+numpy>=1.26.0
+scipy>=1.12.0
+tqdm>=4.66.0
+
+# Visualisation
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.20.0
+
+# ML
+scikit-learn>=1.4.0
+
+# ── Foundations notebooks ──────────────────────────────────────────────────────
+
+# PageRank
+networkx>=3.2.0
+
+# Market Basket
+mlxtend>=0.23.0
+
+# ── Ecommerce AI series ────────────────────────────────────────────────────────
+
+# TechHeaven database connection
+pymysql>=1.1.0
+
+# HTML stripping (CMS page content)
+beautifulsoup4>=4.12.0
+
+# LLM providers
+openai>=1.30.0
+anthropic>=0.28.0
+
+# Tokenisation and chunking
+tiktoken>=0.7.0
+
+# Vector store — Postgres + pgvector (run via docker-compose, see README)
+pgvector>=0.3.0
+psycopg2-binary>=2.9.9
+
+# Embeddings — local, no API key required
+sentence-transformers>=3.0.0
+
+# RAG orchestration
+langchain>=0.2.0
+langchain-openai>=0.1.0
+langchain-community>=0.2.0
+
+# Evaluation — installed per-notebook via !pip install due to version sensitivity
+# ragas (see each notebook's install cell)
+
+# Environment variables
+python-dotenv>=1.0.0
