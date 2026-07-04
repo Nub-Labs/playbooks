@@ -1,0 +1,3 @@
+# Charts generated at notebook runtime - not tracked in version control
+*.png
+.ipynb_checkpoints/

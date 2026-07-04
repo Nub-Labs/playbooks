@@ -79,11 +79,11 @@ Series overview: [nublabs.com/playbooks/ecommerce](https://nublabs.com/playbooks
 
 **Prerequisites:** Local Python environment (see setup above) and an OpenAI API key. Some notebooks also connect to a locally running TechHeaven instance for live data.
 
-| Notebook | Description | Status |
+| Notebook | Description | Open |
 |---|---|---|
-| `ecommerce/ai-customer-support/ai_customer_support.ipynb` | RAG-powered customer support assistant. Retrieves answers from TechHeaven's policies, FAQ, and product catalog. | Live |
-| `ecommerce/recommendation-engine/` | Collaborative filtering product recommendations from order history | Upcoming |
-| `ecommerce/semantic-product-search/` | Embedding-based semantic search over the product catalog | Upcoming |
+| `ecommerce/ai-customer-support/ai_customer_support.ipynb` | RAG-powered customer support assistant. Retrieves answers from TechHeaven's policies, FAQ, and product catalog. | Local only |
+| `ecommerce/recommendation-engine/recommendation_engine.ipynb` | Association rules, collaborative filtering and content-based recommendations from TechHeaven order history. Precision@10: CF 14.2%, CBF 8.7%, Hybrid 15.9%. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Nub-Labs/playbooks/blob/main/ecommerce/recommendation-engine/recommendation_engine.ipynb) |
+| `ecommerce/semantic-product-search/semantic_product_search.ipynb` | Sentence-embedding search over 291 products. Doubles category accuracy from 50% to 100% on natural-language queries vs TF-IDF baseline. No API key required. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Nub-Labs/playbooks/blob/main/ecommerce/semantic-product-search/semantic_product_search.ipynb) |
 | `ecommerce/voice-shopping-assistant/` | Voice-first shopping powered by speech-to-text + LLM | Upcoming |
 
 Full roadmap: [nublabs.com/playbooks/ecommerce](https://nublabs.com/playbooks/ecommerce)
